@@ -1,3 +1,4 @@
+import os
 from Book import Book
 
 class Library:
@@ -5,8 +6,14 @@ class Library:
         self.books = []
 
     def show_all_books(self):
+        os.system('clear')
+        if len(self.books) == 0:
+            print("There are no books added yet..")
+
         for i in range(len(self.books)):
             print(f"Id: {self.books[i].id} Title:{self.books[i].title}")
+
+        input("Press [Enter] to continue")
         
     def add_book(self):
         book = Book()

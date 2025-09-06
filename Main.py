@@ -1,3 +1,4 @@
+import os
 from Book import Book
 from Library import Library
 
@@ -5,6 +6,9 @@ library = Library()
 # book = Book("title", "category", "author", 200, 0) // to create a new book
 
 def main_menu():
+    os.system('clear')
+    print("Menu")
+    print()
     print("1. Show Books")
     print("2. Add Book")
     print("3. Edit Book")
@@ -13,7 +17,7 @@ def main_menu():
     print()
     choice = input("")
     
-    if choice == "1":
+    if choice == "1": 
         library.show_all_books()
     elif choice == "2":
         library.add_book()
