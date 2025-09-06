@@ -1,4 +1,5 @@
 import os
+import shutil
 from Book import Book
 from Library import Library
 
@@ -8,7 +9,7 @@ library = Library()
 def main_menu():
     os.system('clear')
     print("Menu")
-    print()
+    print("-" * shutil.get_terminal_size().columns)
     print("1. Show Books")
     print("2. Add Book")
     print("3. Edit Book")
@@ -22,6 +23,8 @@ def main_menu():
     elif choice == "2":
         library.add_book()
     elif choice == "3":
+        ...
+    elif choice == "4":
         library.remove_book()
     else:
         input("Thats not a valid choice! [Enter]")
