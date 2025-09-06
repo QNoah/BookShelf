@@ -1,5 +1,8 @@
+import itertools
 class Book:
+    id_iter = itertools.count()
     def __init__(self, title="", category="", author="", total_pages=0, read_pages=0):
+        self.id = next(self.id_iter)
         self.title = title
         self.category = category
         self.author = author

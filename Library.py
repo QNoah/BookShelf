@@ -6,7 +6,7 @@ class Library:
 
     def show_all_books(self):
         for i in range(len(self.books)):
-            print(self.books[i].title)
+            print(f"Id: {self.books[i].id} Title:{self.books[i].title}")
         
     def add_book(self):
         book = Book()
@@ -16,4 +16,6 @@ class Library:
         book.total_pages = input("Enter the total pages of the book: ") 
         self.books.append(book)
         self.show_all_books()
-    
+
+    def remove_book(self):
+        ...
