@@ -1,6 +1,6 @@
 import os
 import shutil
-from Book import Book
+from book import Book
 from Library import Library
 
 library = Library()
@@ -30,4 +30,5 @@ def main_menu():
         input("Thats not a valid choice! [Enter]")
     main_menu()
 
-main_menu()
+if __name__ == "__main__":
+    main_menu()
