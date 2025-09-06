@@ -1,5 +1,5 @@
 import unittest
-from book import Book
+from ..book import Book
 
 class BookTestCase(unittest.TestCase):
     def setUp(self):
